@@ -1,0 +1,50 @@
+@font-face {
+  font-family: myRoboto;
+  src: url(../Fonts/RobotoCondensed-Regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0.07rem;
+  font-family: myRoboto;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ccc;
+}
+
+#root {
+  max-width: 1600px;
+  width: 100%;
+  min-height: calc(100vh - 125px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar{
+  display: none;
+}

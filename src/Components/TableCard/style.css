@@ -1,0 +1,69 @@
+#tabCard {
+  width: 100%;
+  height: calc(100vh - 101px);
+  display: flex;
+  justify-content: center;
+  padding: 50px;
+}
+
+#tabCard > div {
+  max-height: calc(100vh - 180px);
+  width: 100%;
+  overflow: auto;
+}
+
+#tabCard > div > table > th {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 38px;
+  letter-spacing: 0.05em;
+  color: #004d40;
+}
+
+#tabCard > div > table {
+  min-width: 900px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#tabCard > div > table > thead {
+  background: #a6a6a6;
+  height: 90px;
+  position: sticky;
+  top: 0;
+}
+
+#tabCard > div > table > tbody > tr {
+  height: 90px;
+  background: #004d400d;
+  margin: 10px 0 !important;
+}
+
+tr{
+    border-bottom: 5px solid #fff;
+}
+
+th {
+  font-weight: 400;
+  font-size: 22px;
+  color: #004d40;
+}
+
+.btn > img {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn > img:active {
+  background: #a6a6a6;
+}
+
+.imgCard{
+    width: 130px;
+    height: 130px;
+}
+.imgCard>img{
+    width: 100%;
+}

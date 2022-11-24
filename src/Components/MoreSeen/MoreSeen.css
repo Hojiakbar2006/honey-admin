@@ -1,0 +1,124 @@
+.moreSeen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #607d8b1a;
+  border-radius: 10px;
+  grid-area: 1/3/3/4;
+  padding: 30px;
+}
+/* 
+.moreSeen > ::-webkit-scrollbar {
+  width: 6px;
+}
+
+.moreSeen > ::-webkit-scrollbar-thumb {
+  background: #828a8e78;
+  border-radius: 10px;
+} */
+
+.moreSeen > h2 {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+  color: #004d40;
+  margin-bottom: 30px;
+}
+
+.moreSeen > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  overflow-x: auto;
+}
+
+.moreSeen > div > .itemCard {
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 25px;
+}
+
+.itemCard > div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.itemCard > div > h2 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: #004d40;
+}
+
+.itemCard > div > span {
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  color: #004d40;
+}
+
+.itemCard > button {
+  background: #2196f3;
+  border-radius: 7px;
+  border: 1px solid #fff;
+  padding: 6px 15px;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.itemCard > button:hover {
+  background: #fff;
+  color: #2196f3;
+  border: 1px solid #2196f3;
+}
+
+.itemCard > button:active {
+  background: #2196f3;
+  color: #fff;
+}
+
+.MoreSeenNotif {
+  position: fixed;
+  width: 100%;
+  height: 0;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0000002e;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.openDetail {
+  height: 100%;
+}
+
+.MoreSeenNotif>div{
+  width: 300px;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  border-radius: 10px;
+}
+
+.MoreSeenNotif>div>figure{
+  width: 100%;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+.MoreSeenNotif>div>figure>img{
+  width: 100%;
+}

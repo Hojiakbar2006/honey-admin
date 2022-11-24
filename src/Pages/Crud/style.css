@@ -1,0 +1,175 @@
+#crudContainer {
+  width: 100%;
+  height: calc(100vh - 101px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#crudContainer > form {
+  width: 620px;
+  display: grid;
+  grid-template-columns: repeat(2, 45%);
+  grid-template-rows: repeat(7, 50px);
+  justify-content: space-between;
+  gap: 35px 20px;
+}
+
+::-webkit-resizer {
+  display: none;
+}
+
+#crudContainer > form > input,
+#crudContainer > form > textarea {
+  border: none;
+  background: #f0f0f0;
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px 8px 0px 0px;
+  outline: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  padding-left: 20px;
+  color: #004d40;
+}
+
+#crudContainer > form > textarea {
+  padding-top: 20px;
+}
+
+#crudContainer > form > :nth-child(5) {
+  grid-area: 3/1/5/3;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+#crudContainer > form > :nth-child(5) > div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card > input {
+  display: none;
+}
+
+#crudContainer > form > :last-child {
+  background: #03a9f4;
+  border-radius: 8px;
+  border: 2px solid #03a9f4;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#crudContainer > form > :last-child:hover {
+  background: #fff;
+  color: #03a9f4;
+}
+#crudContainer > form > :last-child:active {
+  background: #03a9f4;
+  color: #fff;
+}
+
+.card {
+  width: 130px;
+  height: 130px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mapImgCard {
+  width: 130px;
+  height: 130px;
+  border: 2px solid #f0f0f0;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mapImgCard > img {
+  width: 100%;
+}
+
+#crudContainer > form > :nth-child(6) {
+  grid-area: 5/1/7/3;
+}
+
+#crudContainer > form > :nth-child(7) {
+  grid-area: 7/2/8/3;
+}
+
+.trashBtn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+  background: #fff;
+  padding: 6px 7px;
+  border-radius: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+.trashBtn:hover{
+  border: 2px solid #f0f0f0;
+  background: transparent;
+}
+
+@media (max-width: 1200px) {
+  #crudContainer > form {
+    width: 570px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(7, 45px);
+    gap: 35px 20px;
+  }
+}
+@media (max-width: 1000px) {
+  #crudContainer > form {
+    width: 520px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(7, 45px);
+    gap: 35px 20px;
+  }
+}
+@media (max-width: 800px) {
+  #crudContainer > form {
+    width: 470px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(7, 45px);
+    gap: 35px 20px;
+  }
+}
+@media (max-width: 600px) {
+  #crudContainer > form {
+    width: 380px;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+    grid-template-rows: repeat(7, 45px);
+    gap: 35px 20px;
+  }
+}

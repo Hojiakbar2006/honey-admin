@@ -1,0 +1,330 @@
+#navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 40px;
+  border-bottom: 1px solid #00000066;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 40px;
+}
+
+.profile > figure {
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #000;
+}
+
+.profile > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.profile > div > h3 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 40px;
+  color: #004d40;
+}
+
+.profile > div > p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  color: #828282;
+}
+
+.AppProfile {
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.AppProfile > figure {
+  width: 100px;
+  height: 100px;
+  background: #000;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.navItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 70px;
+}
+
+.searchLabel {
+  width: 270px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #f0f0f0;
+  border-radius: 7px;
+  padding: 5px 15px;
+  position: relative;
+}
+
+.searchLabel > input {
+  width: 100%;
+  border: none;
+  background: none;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  letter-spacing: 0.05em;
+  border-right: 2px solid #0000002e;
+  color: #00000066;
+  outline: none;
+}
+
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: 30px;
+}
+
+.notification > img {
+  cursor: pointer;
+}
+
+.showSearechValue {
+  width: 100%;
+  max-height: 300px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  top: 36px;
+  left: 0;
+}
+
+.showSearechValue > button {
+  border: none;
+  border-bottom: 1px solid #0000002e;
+  padding: 12px 40px;
+  font-size: 22px;
+  text-align: left;
+}
+
+.showSearechValue > :first-child {
+  border-top: 1px solid #0000002e;
+}
+
+.menubtn {
+  background: none;
+  border: none;
+  transition: all 0.3s ease;
+  padding: 0 5px;
+  border-radius: 10px;
+}
+
+.menubtn:hover {
+  background: #a8a7a7a4;
+}
+.menubtn:active {
+  background: #fff;
+}
+
+.navItem > .menubtn {
+  display: none;
+}
+
+.navBtn {
+  transition: all 0.3s ease;
+  border: 1px solid #858585ab;
+}
+
+.navBtn:hover {
+  background: #858585ab;
+  border: 1px solid #858585ab;
+}
+
+.navBtn.active {
+  background: #858585ab;
+  border: 1px solid #858585ab;
+}
+
+.navBtn:active {
+  border: 1px solid #858585ab;
+  background: #fff;
+}
+
+.AppModalCard {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #0000001a;
+  left: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+    opacity: 0;
+  z-index: -1;
+}
+.NotifModalCard {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: #0000001a;
+  right: 0;
+  top: 0;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  z-index: -1;
+}
+
+.open {
+  opacity: 1;
+  z-index: 1;
+}
+
+.appBar {
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+  padding: 50px 10px;
+  transform: translateX(-100%);
+  border-radius: 10px;
+}
+.notifModal1 {
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  padding: 50px 20px;
+  transform: translateX(100%);
+  border-radius: 10px;
+  gap: 15px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  
+}
+
+.notifModal1 > button {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  /* border: 2px solid #03a9f4; */
+  border: none;
+  background: #03a9f4;
+  color: #fff;
+  font-size: 18px;
+  transition: all 0.4s ease;
+}
+
+.notifModal1 > button:hover {
+  background: #fff;
+  color: #03a9f4;
+  border: 2px solid #03a9f4;
+}
+
+.notifModal1 > button:active {
+  background: #03a9f4;
+  color: #fff;
+  border: 2px solid #03a9f4;
+}
+
+.notifModal1 > div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid #858585ab;
+  cursor: pointer;
+}
+
+.notifModal1 > div:hover {
+  background: #858585ab;
+}
+
+.openNOtif {
+  transform: translateX(0);
+}
+
+.openApp {
+  transform: translateX(0);
+}
+
+.appBar > div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.appBar > div > a {
+  width: 100%;
+  color: #3d3c3c;
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  margin: 0 10px;
+  border-radius: 10px;
+}
+
+.appBar > a {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #3d3c3c;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+@media (max-width: 1250px) {
+  .profile {
+    display: none;
+  }
+
+  .AppProfile {
+    display: flex;
+  }
+  .navItem {
+    width: 100%;
+    gap: 10%;
+  }
+  .navItem > .menubtn {
+    display: flex;
+  }
+}
+@media (max-width: 1000px) {
+  .navItem > a {
+    display: none;
+  }
+  .notification {
+    gap: 10px;
+    margin-left: 0;
+  }
+}
