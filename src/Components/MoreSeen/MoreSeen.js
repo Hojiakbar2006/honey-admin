@@ -3,16 +3,27 @@ import "./MoreSeen.css";
 import view from "../../Assets/Images/view.svg";
 import { MoreSeenNotif } from "../Modal/MoreSeenNotif";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 export function MoreSeen({ data }) {
   const [detail, setDetail] = useState({});
   const [open, setOpen] = useState(false);
 
+  const product = useSelector((state) => state.product);
+
+  const filteredPr = product
+    .filter((item) => item.view > 10)
+    .sort((a, b) => {
+      return b.view - a.view;
+    });
+
+  filteredPr.length = 15;
+
   return (
     <div className="moreSeen">
       <h2>Eng ko'p korilgan maxsulotlar</h2>
       <div>
-        {data.map((item, index) => {
+        {filteredPr.map((item, index) => {
           return (
             <div key={index} className="itemCard">
               <div>
@@ -23,7 +34,7 @@ export function MoreSeen({ data }) {
               </div>
               <button
                 onClick={() => {
-                  setDetail({...item, img:item.img[0]||[]});
+                  setDetail({ ...item, img: item.img[0] || [] });
                   setOpen(!open);
                 }}
               >
