@@ -11,6 +11,7 @@ export function InfCard({data}) {
           <div key={item.id}>
             <h2>{item.cardName}</h2>
             <h3>{item.total}</h3>
+            salom
           </div>
         );
       })}
